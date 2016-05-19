@@ -18,10 +18,21 @@ namespace NoivaModasMostra
         {
             InitializeComponent();
             conexao = new Conexao("localhost", "root", "33722363", "mostra2016");
+            if (!conexao.SucessedOnLastLoad)
+            {
+
+                menuStrip1.Enabled = false;
+                mostraGb(loginGb);
+
+            }
+            else
+            {
+                menuStrip1.Enabled = true;
+            }
         }
         private void mostraGb(GroupBox gb)
         {
-            GroupBox[] gbs = { pessoaGb,evGb, locGb};
+            GroupBox[] gbs = { pessoaGb, evGb, locGb, loginGb};
             foreach (GroupBox g in gbs)
             {
                 if (g == gb)
@@ -74,8 +85,6 @@ namespace NoivaModasMostra
 
         private void EvSavebt_Click(object sender, EventArgs e)
         {
-
-
             try
             {
                 int id;
@@ -520,6 +529,20 @@ namespace NoivaModasMostra
                     pesCidadeTb.Text = p.ENDERECO.CIDADE;
                     pesEstadoTb.Text = p.ENDERECO.ESTADO;
                 }
+            }
+        }
+
+        private void logBt_Click(object sender, EventArgs e)
+        {
+            conexao = new Conexao(logIp.Text, "root", "33722363", "mostra2016");
+            if (conexao.SucessedOnLastLoad)
+            {
+                menuStrip1.Enabled = true;
+                loginGb.Hide();
+            }
+            else
+            {
+                MessageBox.Show("não foi possível conectar ao servidor " + logIp.Text);
             }
         }
     }

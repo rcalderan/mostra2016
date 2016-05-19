@@ -125,6 +125,12 @@
             this.locNometb = new System.Windows.Forms.TextBox();
             this.locSalvaBt = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.loginGb = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.logIp = new System.Windows.Forms.TextBox();
+            this.logBt = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pessoaGb.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -138,6 +144,9 @@
             this.locGb.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.loginGb.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -159,27 +168,27 @@
             this.eventoToolStripMenuItem1,
             this.localToolStripMenuItem1});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
             // eventoToolStripMenuItem1
             // 
             this.eventoToolStripMenuItem1.Name = "eventoToolStripMenuItem1";
-            this.eventoToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
+            this.eventoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.eventoToolStripMenuItem1.Text = "Evento";
             this.eventoToolStripMenuItem1.Click += new System.EventHandler(this.eventoToolStripMenuItem1_Click);
             // 
             // localToolStripMenuItem1
             // 
             this.localToolStripMenuItem1.Name = "localToolStripMenuItem1";
-            this.localToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
+            this.localToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.localToolStripMenuItem1.Text = "Local";
             this.localToolStripMenuItem1.Click += new System.EventHandler(this.localToolStripMenuItem1_Click);
             // 
@@ -189,25 +198,25 @@
             this.anamneseToolStripMenuItem,
             this.relatórioToolStripMenuItem});
             this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
-            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.eventoToolStripMenuItem.Text = "Ações";
             // 
             // anamneseToolStripMenuItem
             // 
             this.anamneseToolStripMenuItem.Name = "anamneseToolStripMenuItem";
-            this.anamneseToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.anamneseToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.anamneseToolStripMenuItem.Text = "Anamnese";
             // 
             // relatórioToolStripMenuItem
             // 
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.relatórioToolStripMenuItem.Text = "Relatório";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // pessoaGb
@@ -1264,11 +1273,89 @@
             this.locSalvaBt.UseVisualStyleBackColor = true;
             this.locSalvaBt.Click += new System.EventHandler(this.locSalvaBt_Click);
             // 
+            // loginGb
+            // 
+            this.loginGb.Controls.Add(this.tableLayoutPanel10);
+            this.loginGb.Location = new System.Drawing.Point(48, 236);
+            this.loginGb.Name = "loginGb";
+            this.loginGb.Size = new System.Drawing.Size(826, 410);
+            this.loginGb.TabIndex = 4;
+            this.loginGb.TabStop = false;
+            this.loginGb.Visible = false;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 1, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 3;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(820, 391);
+            this.tableLayoutPanel10.TabIndex = 0;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.logIp, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.logBt, 0, 2);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(83, 83);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 3;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(654, 225);
+            this.tableLayoutPanel11.TabIndex = 0;
+            // 
+            // label31
+            // 
+            this.label31.AutoEllipsis = true;
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label31.Location = new System.Drawing.Point(3, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(648, 75);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "IP do servidor:";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // logIp
+            // 
+            this.logIp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logIp.Location = new System.Drawing.Point(3, 78);
+            this.logIp.Name = "logIp";
+            this.logIp.Size = new System.Drawing.Size(648, 20);
+            this.logIp.TabIndex = 1;
+            this.logIp.Text = "192.168.0.1";
+            this.logIp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // logBt
+            // 
+            this.logBt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logBt.Location = new System.Drawing.Point(3, 153);
+            this.logBt.Name = "logBt";
+            this.logBt.Size = new System.Drawing.Size(648, 69);
+            this.logBt.TabIndex = 2;
+            this.logBt.Text = "Conectar";
+            this.logBt.UseVisualStyleBackColor = true;
+            this.logBt.Click += new System.EventHandler(this.logBt_Click);
+            // 
             // Mostra2016
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.loginGb);
             this.Controls.Add(this.pessoaGb);
             this.Controls.Add(this.evGb);
             this.Controls.Add(this.locGb);
@@ -1298,6 +1385,10 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.loginGb.ResumeLayout(false);
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1401,6 +1492,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.RadioButton pesMulherRb;
         private System.Windows.Forms.RadioButton pesHomenRb;
+        private System.Windows.Forms.GroupBox loginGb;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox logIp;
+        private System.Windows.Forms.Button logBt;
     }
 }
 

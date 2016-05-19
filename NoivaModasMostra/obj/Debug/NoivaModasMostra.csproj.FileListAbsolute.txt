@@ -21,3 +21,13 @@ H:\mostra2016\NoivaModasMostra\obj\Debug\NoivaModasMostra.Properties.Resources.r
 H:\mostra2016\NoivaModasMostra\obj\Debug\NoivaModasMostra.csproj.GenerateResource.Cache
 H:\mostra2016\NoivaModasMostra\obj\Debug\NoivaModasMostra.exe
 H:\mostra2016\NoivaModasMostra\obj\Debug\NoivaModasMostra.pdb
+D:\mostra2016_repo\NoivaModasMostra\bin\Debug\NoivaModasMostra.exe.config
+D:\mostra2016_repo\NoivaModasMostra\bin\Debug\NoivaModasMostra.exe
+D:\mostra2016_repo\NoivaModasMostra\bin\Debug\NoivaModasMostra.pdb
+D:\mostra2016_repo\NoivaModasMostra\bin\Debug\MySql.Data.dll
+D:\mostra2016_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.csprojResolveAssemblyReference.cache
+D:\mostra2016_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.Mostra2016.resources
+D:\mostra2016_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.Properties.Resources.resources
+D:\mostra2016_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.csproj.GenerateResource.Cache
+D:\mostra2016_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.exe
+D:\mostra2016_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.pdb
