@@ -67,8 +67,8 @@ namespace NoivaModasMostra
         private void limpaEv()
         {
             evIdMtb.Clear();
-            evLocal1Tb.Clear();
-            evLocal2Tb.Clear();
+            evLocal1Cb.Text = "";
+            evLocal2Cb.Text = "";
             evDataDtp.Value = DateTime.Today;
             evEleIdTb.Text = "0";
             evElaIdTb.Text = "0";
@@ -87,6 +87,12 @@ namespace NoivaModasMostra
         {
             try
             {
+                if ((evTipoIdTb.Text=="0")||(evTipoCb.Text =="N/A"))
+                {
+
+                    MessageBox.Show("Escolha o TIPO de evento!");
+                    return;
+                }
                 int id;
                 if (!int.TryParse(evIdMtb.Text, out id))
                     id = 0;
@@ -103,6 +109,8 @@ namespace NoivaModasMostra
                     if (evento != null)
                     {
                         MessageBox.Show("Cadastro realizado com sucesso!");
+                        limpaEv();
+                        evGb.Hide();
                     }
                     else
                     {
@@ -167,12 +175,61 @@ namespace NoivaModasMostra
         private void locSalvaBt_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                if ((locTipoIdTb.Text == "0") || (locTipoCb.Text == "N/A"))
+                {
+                    MessageBox.Show("Escolha o TIPO de Local!");
+                    return;
+                }
+                int id;
+                if (!int.TryParse(locIdMtb.Text, out id))
+                    id = 0;
+
+                if ((string.IsNullOrEmpty(locNomeTb.Text)))
+                {
+                    MessageBox.Show("Escolha pelo o nome!");
+                    return;
+                }
+                Local local = Local.Load(id, conexao.getConnection());
+                if (local == null)
+                {
+                    local = Local.New(int.Parse(locTipoIdTb.Text),locNomeTb.Text,locCepMtb.Text,locEnderecoTb.Text,locNumeroTb.Text,locBairroTb.Text,locCidadeTb.Text,locEstadotb.Text, conexao.getConnection());
+                    if (local != null)
+                    {
+                        MessageBox.Show("Cadastro realizado com sucesso!");
+                        mostraGb(evGb);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao cadastrar");
+                    }
+                }
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Deseja mesmo atualizar o cadastro?", "atualizar", MessageBoxButtons.YesNo))
+                    {
+                        if (Local.Update(id,local.TIPO.ID,locNomeTb.Text ,locCepMtb.Text,locEnderecoTb.Text,locNumeroTb.Text,locBairroTb.Text,locCidadeTb.Text,locEstadotb.Text,conexao.getConnection()))
+                        {
+                            MessageBox.Show("Atualização feita!");
+                        }
+                        else
+                            MessageBox.Show("Erro ao atualizar");
+                    }
+                    else
+                        carregaLocal(id);
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
 
         private void limpaLoc()
         {
             locIdMtb.Clear();
-            locNometb.Clear();
+            locNomeTb.Clear();
             locEstadotb.Clear();
             locBairroTb.Clear();
             locCidadeTb.Clear();
@@ -222,7 +279,7 @@ namespace NoivaModasMostra
                     pessoa = Pessoa.New(pesHomenRb.Checked,pesCpfMtb.Text, pesNomeTb.Text, pesCelTb.Text, pesFixoTb.Text,pesEmailTb.Text, pesNumeroTb.Text, endereco, conexao.getConnection());
                     if (pessoa != null)
                     {
-                        limpaEv();
+                        //limpaEv();
                         if (pesHomenRb.Checked)
                         {
                             evEleIdTb.Text = pessoa.ID.ToString();
@@ -421,7 +478,7 @@ namespace NoivaModasMostra
             if (l != null)
             {
                 locCepMtb.Text = l.CEP;
-                locNometb.Text = l.NOME;
+                locNomeTb.Text = l.NOME;
                 locEnderecoTb.Text = l.ENDERECO;
                 locNumeroTb.Text = l.NUMERO;
                 locBairroTb.Text = l.BAIRRO;
@@ -459,7 +516,11 @@ namespace NoivaModasMostra
             if (locGb.Visible)
             {
                 locTipoCb.Items.Clear();
-                locTipoCb.Items.AddRange(TipoLocal.getAll(conexao.getConnection()).ToArray());
+                foreach (TipoLocal s in TipoLocal.getAll(conexao.getConnection()))
+                {
+                    locTipoCb.Items.Add(s.NOME);
+                }
+
             }
         }
 
@@ -468,7 +529,18 @@ namespace NoivaModasMostra
             if (evGb.Visible)
             {
                 evTipoCb.Items.Clear();
-                evTipoCb.Items.AddRange(TipoEvento.getAll(conexao.getConnection()).ToArray());
+                foreach(TipoEvento s in TipoEvento.getAll(conexao.getConnection()))
+                {
+
+                    evTipoCb.Items.Add(s.NOME);
+                }
+                evLocal1Cb.Items.Clear();
+                evLocal2Cb.Items.Clear();
+                foreach (KeyValuePair<int, string> k in Local.GetAll(conexao.getConnection()))
+                {
+                    evLocal1Cb.Items.Add(k.Key.ToString() + "-" + k.Value);
+                    evLocal2Cb.Items.Add(k.Key.ToString() + "-" + k.Value);
+                }
             }
         }
 
@@ -544,6 +616,51 @@ namespace NoivaModasMostra
             {
                 MessageBox.Show("não foi possível conectar ao servidor " + logIp.Text);
             }
+        }
+
+        private void evLocal1Cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = -1;
+                index = evLocal1Cb.Text.IndexOf('-');
+                if (index != -1)
+                    evLocal1IdTb.Text = evLocal1Cb.Text.Substring(0, index);
+            }
+            catch { }
+        }
+
+        private void evLocal2Cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int index = -1;
+                index = evLocal2Cb.Text.IndexOf('-');
+                if (index != -1)
+                    evLocal2IdTb.Text = evLocal2Cb.Text.Substring(0, index);
+            }
+            catch { }
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Noiva Modas - Rua Jesuíno de Arruda, 1837 centro. São Carlos/SP\nTodos Direitos Reservados.");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mostraGb(locGb);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mostraGb(pessoaGb);
+        }
+
+        private void evGb_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

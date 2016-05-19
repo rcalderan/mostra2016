@@ -101,8 +101,6 @@ namespace NoivaModasMostra
         }
         public static Local Load(int id, MySqlConnection con)
         {
-            Local NA = new Local();
-            NA.ID = 0;
             try
             {
                 if (con.State != System.Data.ConnectionState.Open)
@@ -128,14 +126,80 @@ namespace NoivaModasMostra
                 else
                 {
                     con.Close();
-                    return NA;
+                    return null;
                 }
             }
             catch
             {
                 if (con != null)
                     con.Close();
-                return NA;
+                return null;
+            }
+        }
+        public static bool Update(int id, int tipo, string nome, string cep, string endereco, string numero, string bairro, string cidade, string estado, MySqlConnection con)
+        {
+            try
+            {
+                if (con.State != System.Data.ConnectionState.Open)
+                    con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("update local set tipo=" +
+                    tipo.ToString() + ",nome='" +
+                    nome + "',cep='" +
+                    cep + "',endereco='" +
+                    endereco + "',numero='" +
+                    numero + "',bairro='" +
+                    bairro + "',cidade='" +
+                    cidade + "',estado='" +
+                    estado + "' WHERE id=" + id.ToString(), con);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    con.Close();
+                    return true;
+                }
+                else
+                {
+                    con.Close();
+                    return false;
+                }
+
+            }
+            catch (Exception e)
+            {
+                if (con != null)
+                    con.Close();
+                return false;
+            }
+        }
+
+        public static Dictionary<int, string> GetAll(MySqlConnection con)
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string>();
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+                MySqlDataAdapter ad = new MySqlDataAdapter("select * from local order by id asc", con);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                con.Close();
+                if (dt.Rows.Count > 1)
+                {
+                    foreach (DataRow r in dt.Rows)
+                    {
+                        if ((int)r["tipo"]!=1)
+                            dic.Add((int)r["id"], r["nome"].ToString());
+                    }
+                }
+                return dic;
+
+            }
+            catch
+            {
+                if (con != null)
+                    con.Close();
+                return dic;
             }
         }
     }

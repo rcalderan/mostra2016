@@ -92,7 +92,7 @@ namespace NoivaModasMostra
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("Execute o aplicativo como administrador!");
+                   // System.Windows.Forms.MessageBox.Show("Execute o aplicativo como administrador!");
                     
                 }
 
@@ -150,7 +150,7 @@ namespace NoivaModasMostra
                 SucessedOnLastLoad = false;
                 if (conexao!= null)
                     conexao.Close();
-                System.Windows.Forms.MessageBox.Show("Catch: "+ ex.Message);
+                //System.Windows.Forms.MessageBox.Show("Catch: "+ ex.Message);
                 //System.Windows.Forms.MessageBox.Show("Erro no processo de conexão!:\n" + ex.Message + "\n\nContate o programador!");
                 //System.Windows.Forms.Application.Exit();
             }
@@ -399,24 +399,16 @@ namespace NoivaModasMostra
                         "numero VARCHAR(5) NULL, "+
                         "cidade VARCHAR(70) NULL, "+
                         "bairro VARCHAR(70) NULL, "+
-                        "estado VARCHAR(2) NULL,PRIMARY KEY (id),INDEX tipoFK_idx (tipo ASC), CONSTRAINT tipoFK FOREIGN KEY (tipo)"+
-                        "REFERENCES tipo_local (id)    ON DELETE NO ACTION    ON UPDATE NO ACTION)ENGINE = InnoDB"},
+                        "estado VARCHAR(2) NULL,PRIMARY KEY (id))ENGINE = InnoDB"},
 
                         {"pessoa","CREATE TABLE IF NOT EXISTS pessoa (id INT NOT NULL AUTO_INCREMENT, sexo TINYINT(1) NULL, cpf VARCHAR(14) NOT NULL, nome VARCHAR(80) NULL,"+
                         "celular VARCHAR(14) NULL, fixo VARCHAR(14) NULL," +
-                        "email VARCHAR(70) NULL, facebook VARCHAR(70) NULL, endereco_id INT NULL, PRIMARY KEY (id, cpf),"+
-                        "INDEX endFk_idx (endereco_id ASC), CONSTRAINT endFk  FOREIGN KEY (endereco_id)"+
-                        " REFERENCES local (id)   ON DELETE NO ACTION    ON UPDATE NO ACTION) ENGINE = InnoDB" },
+                        "email VARCHAR(70) NULL, facebook VARCHAR(70) NULL, endereco_id INT NULL, PRIMARY KEY (id, cpf)) ENGINE = InnoDB" },
 
                         {"tipo_evento","CREATE TABLE IF NOT EXISTS tipo_evento (id INT NOT NULL AUTO_INCREMENT, nome VARCHAR(45) NULL, PRIMARY KEY (id)) ENGINE = InnoDB" },
 
                         {"evento","CREATE TABLE IF NOT EXISTS evento (id INT NOT NULL AUTO_INCREMENT,tipo INT NULL,data DATE NULL, ele INT NULL,ela INT NULL,"+
-                        "religioso INT NULL, festa INT NULL,  PRIMARY KEY (id), INDEX ele_FK_idx (ele ASC),"+
-                        " INDEX local_FK_idx (religioso ASC), INDEX ela_FK_idx (ela ASC), INDEX festa_idx (festa ASC), CONSTRAINT ele_FK"+
-                        " FOREIGN KEY(ele) REFERENCES pessoa (id) ON DELETE NO ACTION  ON UPDATE NO ACTION, "+
-                        "CONSTRAINT religioso_FK FOREIGN KEY (religioso) REFERENCES local (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"+
-                        "CONSTRAINT ela_FK FOREIGN KEY (ela) REFERENCES pessoa (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"+
-                        "CONSTRAINT festa_FK FOREIGN KEY (festa) REFERENCES local (id) ON DELETE NO ACTION ON UPDATE NO ACTION) ENGINE = InnoDB" },
+                        "religioso INT NULL, festa INT NULL,  PRIMARY KEY (id)) ENGINE = InnoDB" },
                     };
                     Dictionary<string, List<string>> firstInsert = new Dictionary<string, List<string>>(){
                         {"tipo_evento", new List<string>(){

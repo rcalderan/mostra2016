@@ -76,15 +76,12 @@
             this.pesEmailTb = new System.Windows.Forms.TextBox();
             this.pesNomeTb = new System.Windows.Forms.TextBox();
             this.evGb = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.EvSavebt = new System.Windows.Forms.Button();
             this.evIdMtb = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.evLocal2IdTb = new System.Windows.Forms.TextBox();
-            this.evLocal2Tb = new System.Windows.Forms.TextBox();
-            this.evLocal1Tb = new System.Windows.Forms.TextBox();
             this.evElaTb = new System.Windows.Forms.TextBox();
             this.evEleTb = new System.Windows.Forms.TextBox();
             this.evLocal1IdTb = new System.Windows.Forms.TextBox();
@@ -100,6 +97,8 @@
             this.evTipoCb = new System.Windows.Forms.ComboBox();
             this.evTipoIdTb = new System.Windows.Forms.TextBox();
             this.evLimpaBt = new System.Windows.Forms.Button();
+            this.evLocal1Cb = new System.Windows.Forms.ComboBox();
+            this.evLocal2Cb = new System.Windows.Forms.ComboBox();
             this.locGb = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -122,7 +121,7 @@
             this.locEnderecoTb = new System.Windows.Forms.TextBox();
             this.locCepMtb = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.locNometb = new System.Windows.Forms.TextBox();
+            this.locNomeTb = new System.Windows.Forms.TextBox();
             this.locSalvaBt = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.loginGb = new System.Windows.Forms.GroupBox();
@@ -131,6 +130,14 @@
             this.label31 = new System.Windows.Forms.Label();
             this.logIp = new System.Windows.Forms.TextBox();
             this.logBt = new System.Windows.Forms.Button();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pessoaGb.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -139,7 +146,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.evGb.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.locGb.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -147,6 +153,10 @@
             this.loginGb.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -168,27 +178,27 @@
             this.eventoToolStripMenuItem1,
             this.localToolStripMenuItem1});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // pessoaToolStripMenuItem
             // 
             this.pessoaToolStripMenuItem.Name = "pessoaToolStripMenuItem";
-            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pessoaToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.pessoaToolStripMenuItem.Text = "Pessoa";
             this.pessoaToolStripMenuItem.Click += new System.EventHandler(this.pessoaToolStripMenuItem_Click);
             // 
             // eventoToolStripMenuItem1
             // 
             this.eventoToolStripMenuItem1.Name = "eventoToolStripMenuItem1";
-            this.eventoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.eventoToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.eventoToolStripMenuItem1.Text = "Evento";
             this.eventoToolStripMenuItem1.Click += new System.EventHandler(this.eventoToolStripMenuItem1_Click);
             // 
             // localToolStripMenuItem1
             // 
             this.localToolStripMenuItem1.Name = "localToolStripMenuItem1";
-            this.localToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.localToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.localToolStripMenuItem1.Text = "Local";
             this.localToolStripMenuItem1.Click += new System.EventHandler(this.localToolStripMenuItem1_Click);
             // 
@@ -198,31 +208,32 @@
             this.anamneseToolStripMenuItem,
             this.relatórioToolStripMenuItem});
             this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
-            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.eventoToolStripMenuItem.Text = "Ações";
             // 
             // anamneseToolStripMenuItem
             // 
             this.anamneseToolStripMenuItem.Name = "anamneseToolStripMenuItem";
-            this.anamneseToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.anamneseToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.anamneseToolStripMenuItem.Text = "Anamnese";
             // 
             // relatórioToolStripMenuItem
             // 
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.relatórioToolStripMenuItem.Text = "Relatório";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // pessoaGb
             // 
             this.pessoaGb.Controls.Add(this.tableLayoutPanel1);
-            this.pessoaGb.Location = new System.Drawing.Point(39, 28);
+            this.pessoaGb.Location = new System.Drawing.Point(315, 27);
             this.pessoaGb.Name = "pessoaGb";
             this.pessoaGb.Size = new System.Drawing.Size(867, 500);
             this.pessoaGb.TabIndex = 1;
@@ -438,7 +449,7 @@
             this.pesLimpaBt.Location = new System.Drawing.Point(3, 48);
             this.pesLimpaBt.Name = "pesLimpaBt";
             this.pesLimpaBt.Size = new System.Drawing.Size(206, 40);
-            this.pesLimpaBt.TabIndex = 2;
+            this.pesLimpaBt.TabIndex = 0;
             this.pesLimpaBt.Text = "Limpar";
             this.pesLimpaBt.UseVisualStyleBackColor = true;
             this.pesLimpaBt.Click += new System.EventHandler(this.pesLimpaBt_Click);
@@ -477,7 +488,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50167F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.50328F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(424, 378);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label6
             // 
@@ -558,7 +569,7 @@
             this.pesMulherRb.Location = new System.Drawing.Point(159, 3);
             this.pesMulherRb.Name = "pesMulherRb";
             this.pesMulherRb.Size = new System.Drawing.Size(150, 17);
-            this.pesMulherRb.TabIndex = 0;
+            this.pesMulherRb.TabIndex = 1;
             this.pesMulherRb.TabStop = true;
             this.pesMulherRb.Text = "Mulher";
             this.pesMulherRb.UseVisualStyleBackColor = true;
@@ -638,7 +649,7 @@
             this.pesFixoTb.MaxLength = 70;
             this.pesFixoTb.Name = "pesFixoTb";
             this.pesFixoTb.Size = new System.Drawing.Size(312, 26);
-            this.pesFixoTb.TabIndex = 4;
+            this.pesFixoTb.TabIndex = 6;
             // 
             // pesCelTb
             // 
@@ -648,7 +659,7 @@
             this.pesCelTb.MaxLength = 70;
             this.pesCelTb.Name = "pesCelTb";
             this.pesCelTb.Size = new System.Drawing.Size(312, 26);
-            this.pesCelTb.TabIndex = 4;
+            this.pesCelTb.TabIndex = 5;
             // 
             // pesFaceTb
             // 
@@ -685,28 +696,16 @@
             // 
             // evGb
             // 
-            this.evGb.Controls.Add(this.tableLayoutPanel4);
-            this.evGb.Location = new System.Drawing.Point(12, 43);
+            this.evGb.Controls.Add(this.tableLayoutPanel5);
+            this.evGb.Location = new System.Drawing.Point(33, 169);
             this.evGb.Name = "evGb";
             this.evGb.Size = new System.Drawing.Size(665, 396);
-            this.evGb.TabIndex = 2;
+            this.evGb.TabIndex = 4;
             this.evGb.TabStop = false;
             this.evGb.Text = "Evento";
             this.evGb.Visible = false;
             this.evGb.VisibleChanged += new System.EventHandler(this.evGb_VisibleChanged);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(21, 33);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(614, 343);
-            this.tableLayoutPanel4.TabIndex = 0;
+            this.evGb.Enter += new System.EventHandler(this.evGb_Enter);
             // 
             // tableLayoutPanel5
             // 
@@ -719,10 +718,6 @@
             this.tableLayoutPanel5.Controls.Add(this.evIdMtb, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.label17, 0, 6);
             this.tableLayoutPanel5.Controls.Add(this.evLocal2IdTb, 1, 6);
-            this.tableLayoutPanel5.Controls.Add(this.evLocal2Tb, 2, 6);
-            this.tableLayoutPanel5.Controls.Add(this.evLocal1Tb, 2, 5);
-            this.tableLayoutPanel5.Controls.Add(this.evElaTb, 2, 4);
-            this.tableLayoutPanel5.Controls.Add(this.evEleTb, 2, 3);
             this.tableLayoutPanel5.Controls.Add(this.evLocal1IdTb, 1, 5);
             this.tableLayoutPanel5.Controls.Add(this.label16, 0, 5);
             this.tableLayoutPanel5.Controls.Add(this.label15, 0, 4);
@@ -736,8 +731,12 @@
             this.tableLayoutPanel5.Controls.Add(this.evTipoCb, 2, 1);
             this.tableLayoutPanel5.Controls.Add(this.evTipoIdTb, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.evLimpaBt, 0, 7);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel12, 2, 5);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel13, 2, 6);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel14, 2, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel15, 2, 4);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 8;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -748,26 +747,26 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(608, 307);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(659, 377);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label11.Location = new System.Drawing.Point(121, 0);
+            this.label11.Location = new System.Drawing.Point(133, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 38);
+            this.label11.Size = new System.Drawing.Size(18, 47);
             this.label11.TabIndex = 0;
             this.label11.Text = "ID";
             // 
             // EvSavebt
             // 
             this.EvSavebt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EvSavebt.Location = new System.Drawing.Point(185, 269);
+            this.EvSavebt.Location = new System.Drawing.Point(197, 332);
             this.EvSavebt.Name = "EvSavebt";
-            this.EvSavebt.Size = new System.Drawing.Size(420, 35);
-            this.EvSavebt.TabIndex = 10;
+            this.EvSavebt.Size = new System.Drawing.Size(459, 42);
+            this.EvSavebt.TabIndex = 7;
             this.EvSavebt.Text = "Salvar";
             this.EvSavebt.UseVisualStyleBackColor = true;
             this.EvSavebt.Click += new System.EventHandler(this.EvSavebt_Click);
@@ -775,11 +774,11 @@
             // evIdMtb
             // 
             this.evIdMtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evIdMtb.Location = new System.Drawing.Point(185, 3);
+            this.evIdMtb.Location = new System.Drawing.Point(197, 3);
             this.evIdMtb.Mask = "00000";
             this.evIdMtb.Name = "evIdMtb";
             this.evIdMtb.Size = new System.Drawing.Size(53, 22);
-            this.evIdMtb.TabIndex = 2;
+            this.evIdMtb.TabIndex = 0;
             this.evIdMtb.ValidatingType = typeof(int);
             this.evIdMtb.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.evIdMtb_MaskInputRejected);
             this.evIdMtb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.evIdMtb_KeyDown);
@@ -788,66 +787,46 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label17.Location = new System.Drawing.Point(62, 228);
+            this.label17.Location = new System.Drawing.Point(74, 282);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 38);
+            this.label17.Size = new System.Drawing.Size(77, 47);
             this.label17.TabIndex = 1;
             this.label17.Text = "Local 2 (Festa)";
             // 
             // evLocal2IdTb
             // 
             this.evLocal2IdTb.Enabled = false;
-            this.evLocal2IdTb.Location = new System.Drawing.Point(145, 231);
+            this.evLocal2IdTb.Location = new System.Drawing.Point(157, 285);
             this.evLocal2IdTb.Name = "evLocal2IdTb";
             this.evLocal2IdTb.Size = new System.Drawing.Size(34, 20);
             this.evLocal2IdTb.TabIndex = 1;
             this.evLocal2IdTb.Text = "0";
             this.evLocal2IdTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // evLocal2Tb
-            // 
-            this.evLocal2Tb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.evLocal2Tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evLocal2Tb.Location = new System.Drawing.Point(185, 231);
-            this.evLocal2Tb.MaxLength = 90;
-            this.evLocal2Tb.Name = "evLocal2Tb";
-            this.evLocal2Tb.Size = new System.Drawing.Size(420, 22);
-            this.evLocal2Tb.TabIndex = 9;
-            // 
-            // evLocal1Tb
-            // 
-            this.evLocal1Tb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.evLocal1Tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evLocal1Tb.Location = new System.Drawing.Point(185, 193);
-            this.evLocal1Tb.MaxLength = 90;
-            this.evLocal1Tb.Name = "evLocal1Tb";
-            this.evLocal1Tb.Size = new System.Drawing.Size(420, 22);
-            this.evLocal1Tb.TabIndex = 8;
-            // 
             // evElaTb
             // 
             this.evElaTb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.evElaTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evElaTb.Location = new System.Drawing.Point(185, 155);
+            this.evElaTb.Location = new System.Drawing.Point(3, 3);
             this.evElaTb.MaxLength = 80;
             this.evElaTb.Name = "evElaTb";
-            this.evElaTb.Size = new System.Drawing.Size(420, 22);
-            this.evElaTb.TabIndex = 7;
+            this.evElaTb.Size = new System.Drawing.Size(361, 22);
+            this.evElaTb.TabIndex = 4;
             // 
             // evEleTb
             // 
             this.evEleTb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.evEleTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evEleTb.Location = new System.Drawing.Point(185, 117);
+            this.evEleTb.Location = new System.Drawing.Point(3, 3);
             this.evEleTb.MaxLength = 80;
             this.evEleTb.Name = "evEleTb";
-            this.evEleTb.Size = new System.Drawing.Size(420, 22);
-            this.evEleTb.TabIndex = 6;
+            this.evEleTb.Size = new System.Drawing.Size(361, 22);
+            this.evEleTb.TabIndex = 3;
             // 
             // evLocal1IdTb
             // 
             this.evLocal1IdTb.Enabled = false;
-            this.evLocal1IdTb.Location = new System.Drawing.Point(145, 193);
+            this.evLocal1IdTb.Location = new System.Drawing.Point(157, 238);
             this.evLocal1IdTb.Name = "evLocal1IdTb";
             this.evLocal1IdTb.Size = new System.Drawing.Size(34, 20);
             this.evLocal1IdTb.TabIndex = 1;
@@ -858,9 +837,9 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label16.Location = new System.Drawing.Point(42, 190);
+            this.label16.Location = new System.Drawing.Point(54, 235);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 38);
+            this.label16.Size = new System.Drawing.Size(97, 47);
             this.label16.TabIndex = 0;
             this.label16.Text = "Local 1 (Cerimonia)";
             // 
@@ -868,16 +847,16 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label15.Location = new System.Drawing.Point(117, 152);
+            this.label15.Location = new System.Drawing.Point(129, 188);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(22, 38);
+            this.label15.Size = new System.Drawing.Size(22, 47);
             this.label15.TabIndex = 0;
             this.label15.Text = "Ela";
             // 
             // evElaIdTb
             // 
             this.evElaIdTb.Enabled = false;
-            this.evElaIdTb.Location = new System.Drawing.Point(145, 155);
+            this.evElaIdTb.Location = new System.Drawing.Point(157, 191);
             this.evElaIdTb.Name = "evElaIdTb";
             this.evElaIdTb.Size = new System.Drawing.Size(34, 20);
             this.evElaIdTb.TabIndex = 1;
@@ -888,7 +867,7 @@
             // evEleIdTb
             // 
             this.evEleIdTb.Enabled = false;
-            this.evEleIdTb.Location = new System.Drawing.Point(145, 117);
+            this.evEleIdTb.Location = new System.Drawing.Point(157, 144);
             this.evEleIdTb.Name = "evEleIdTb";
             this.evEleIdTb.Size = new System.Drawing.Size(34, 20);
             this.evEleIdTb.TabIndex = 1;
@@ -900,9 +879,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label14.Location = new System.Drawing.Point(117, 114);
+            this.label14.Location = new System.Drawing.Point(129, 141);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(22, 38);
+            this.label14.Size = new System.Drawing.Size(22, 47);
             this.label14.TabIndex = 0;
             this.label14.Text = "Ele";
             // 
@@ -910,9 +889,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label13.Location = new System.Drawing.Point(109, 76);
+            this.label13.Location = new System.Drawing.Point(121, 94);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 38);
+            this.label13.Size = new System.Drawing.Size(30, 47);
             this.label13.TabIndex = 0;
             this.label13.Text = "Data";
             // 
@@ -920,7 +899,7 @@
             // 
             this.evDataCh.AutoSize = true;
             this.evDataCh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evDataCh.Location = new System.Drawing.Point(145, 79);
+            this.evDataCh.Location = new System.Drawing.Point(157, 97);
             this.evDataCh.Name = "evDataCh";
             this.evDataCh.Size = new System.Drawing.Size(15, 14);
             this.evDataCh.TabIndex = 4;
@@ -931,18 +910,18 @@
             // 
             this.evDataDtp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.evDataDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.evDataDtp.Location = new System.Drawing.Point(185, 79);
+            this.evDataDtp.Location = new System.Drawing.Point(197, 97);
             this.evDataDtp.Name = "evDataDtp";
-            this.evDataDtp.Size = new System.Drawing.Size(420, 22);
-            this.evDataDtp.TabIndex = 5;
+            this.evDataDtp.Size = new System.Drawing.Size(459, 22);
+            this.evDataDtp.TabIndex = 2;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label18.Location = new System.Drawing.Point(111, 38);
+            this.label18.Location = new System.Drawing.Point(123, 47);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(28, 38);
+            this.label18.Size = new System.Drawing.Size(28, 47);
             this.label18.TabIndex = 0;
             this.label18.Text = "Tipo";
             // 
@@ -956,16 +935,16 @@
             "Formatura",
             "Aniversario",
             "Outros"});
-            this.evTipoCb.Location = new System.Drawing.Point(185, 41);
+            this.evTipoCb.Location = new System.Drawing.Point(197, 50);
             this.evTipoCb.Name = "evTipoCb";
-            this.evTipoCb.Size = new System.Drawing.Size(420, 21);
-            this.evTipoCb.TabIndex = 4;
+            this.evTipoCb.Size = new System.Drawing.Size(459, 21);
+            this.evTipoCb.TabIndex = 1;
             this.evTipoCb.Text = "N/A";
             // 
             // evTipoIdTb
             // 
             this.evTipoIdTb.Enabled = false;
-            this.evTipoIdTb.Location = new System.Drawing.Point(145, 41);
+            this.evTipoIdTb.Location = new System.Drawing.Point(157, 50);
             this.evTipoIdTb.Name = "evTipoIdTb";
             this.evTipoIdTb.Size = new System.Drawing.Size(34, 20);
             this.evTipoIdTb.TabIndex = 3;
@@ -976,18 +955,38 @@
             // evLimpaBt
             // 
             this.evLimpaBt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.evLimpaBt.Location = new System.Drawing.Point(3, 269);
+            this.evLimpaBt.Location = new System.Drawing.Point(3, 332);
             this.evLimpaBt.Name = "evLimpaBt";
-            this.evLimpaBt.Size = new System.Drawing.Size(136, 35);
-            this.evLimpaBt.TabIndex = 11;
+            this.evLimpaBt.Size = new System.Drawing.Size(148, 42);
+            this.evLimpaBt.TabIndex = 8;
             this.evLimpaBt.Text = "Limpar";
             this.evLimpaBt.UseVisualStyleBackColor = true;
             this.evLimpaBt.Click += new System.EventHandler(this.evLimpaBt_Click);
             // 
+            // evLocal1Cb
+            // 
+            this.evLocal1Cb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.evLocal1Cb.FormattingEnabled = true;
+            this.evLocal1Cb.Location = new System.Drawing.Point(3, 3);
+            this.evLocal1Cb.Name = "evLocal1Cb";
+            this.evLocal1Cb.Size = new System.Drawing.Size(361, 21);
+            this.evLocal1Cb.TabIndex = 9;
+            this.evLocal1Cb.SelectedIndexChanged += new System.EventHandler(this.evLocal1Cb_SelectedIndexChanged);
+            // 
+            // evLocal2Cb
+            // 
+            this.evLocal2Cb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.evLocal2Cb.FormattingEnabled = true;
+            this.evLocal2Cb.Location = new System.Drawing.Point(3, 3);
+            this.evLocal2Cb.Name = "evLocal2Cb";
+            this.evLocal2Cb.Size = new System.Drawing.Size(361, 21);
+            this.evLocal2Cb.TabIndex = 9;
+            this.evLocal2Cb.SelectedIndexChanged += new System.EventHandler(this.evLocal2Cb_SelectedIndexChanged);
+            // 
             // locGb
             // 
             this.locGb.Controls.Add(this.tableLayoutPanel7);
-            this.locGb.Location = new System.Drawing.Point(0, 246);
+            this.locGb.Location = new System.Drawing.Point(146, 61);
             this.locGb.MinimumSize = new System.Drawing.Size(400, 250);
             this.locGb.Name = "locGb";
             this.locGb.Size = new System.Drawing.Size(625, 370);
@@ -1037,7 +1036,7 @@
             this.tableLayoutPanel8.Controls.Add(this.locEnderecoTb, 2, 4);
             this.tableLayoutPanel8.Controls.Add(this.locCepMtb, 2, 3);
             this.tableLayoutPanel8.Controls.Add(this.label27, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.locNometb, 2, 2);
+            this.tableLayoutPanel8.Controls.Add(this.locNomeTb, 2, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -1100,7 +1099,7 @@
             this.locTipoCb.Location = new System.Drawing.Point(186, 33);
             this.locTipoCb.Name = "locTipoCb";
             this.locTipoCb.Size = new System.Drawing.Size(424, 21);
-            this.locTipoCb.TabIndex = 1;
+            this.locTipoCb.TabIndex = 2;
             this.locTipoCb.Text = "N/A";
             // 
             // locTipoIdTb
@@ -1121,7 +1120,7 @@
             this.locLimpaBt.Location = new System.Drawing.Point(3, 273);
             this.locLimpaBt.Name = "locLimpaBt";
             this.locLimpaBt.Size = new System.Drawing.Size(137, 29);
-            this.locLimpaBt.TabIndex = 8;
+            this.locLimpaBt.TabIndex = 10;
             this.locLimpaBt.Text = "Limpar";
             this.locLimpaBt.UseVisualStyleBackColor = true;
             this.locLimpaBt.Click += new System.EventHandler(this.locLimpaBt_Click);
@@ -1192,7 +1191,7 @@
             this.locEstadotb.MaxLength = 3;
             this.locEstadotb.Name = "locEstadotb";
             this.locEstadotb.Size = new System.Drawing.Size(100, 20);
-            this.locEstadotb.TabIndex = 7;
+            this.locEstadotb.TabIndex = 9;
             this.locEstadotb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locCidadeTb
@@ -1202,7 +1201,7 @@
             this.locCidadeTb.MaxLength = 70;
             this.locCidadeTb.Name = "locCidadeTb";
             this.locCidadeTb.Size = new System.Drawing.Size(424, 20);
-            this.locCidadeTb.TabIndex = 6;
+            this.locCidadeTb.TabIndex = 8;
             this.locCidadeTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locBairroTb
@@ -1212,7 +1211,7 @@
             this.locBairroTb.MaxLength = 70;
             this.locBairroTb.Name = "locBairroTb";
             this.locBairroTb.Size = new System.Drawing.Size(424, 20);
-            this.locBairroTb.TabIndex = 5;
+            this.locBairroTb.TabIndex = 7;
             this.locBairroTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locNumeroTb
@@ -1221,7 +1220,7 @@
             this.locNumeroTb.MaxLength = 5;
             this.locNumeroTb.Name = "locNumeroTb";
             this.locNumeroTb.Size = new System.Drawing.Size(100, 20);
-            this.locNumeroTb.TabIndex = 4;
+            this.locNumeroTb.TabIndex = 6;
             this.locNumeroTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locEnderecoTb
@@ -1231,7 +1230,7 @@
             this.locEnderecoTb.MaxLength = 80;
             this.locEnderecoTb.Name = "locEnderecoTb";
             this.locEnderecoTb.Size = new System.Drawing.Size(424, 20);
-            this.locEnderecoTb.TabIndex = 3;
+            this.locEnderecoTb.TabIndex = 5;
             this.locEnderecoTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locCepMtb
@@ -1240,7 +1239,7 @@
             this.locCepMtb.Mask = "00000-999";
             this.locCepMtb.Name = "locCepMtb";
             this.locCepMtb.Size = new System.Drawing.Size(67, 20);
-            this.locCepMtb.TabIndex = 2;
+            this.locCepMtb.TabIndex = 4;
             // 
             // label27
             // 
@@ -1252,15 +1251,15 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "Nome do Local";
             // 
-            // locNometb
+            // locNomeTb
             // 
-            this.locNometb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.locNometb.Location = new System.Drawing.Point(186, 63);
-            this.locNometb.MaxLength = 80;
-            this.locNometb.Name = "locNometb";
-            this.locNometb.Size = new System.Drawing.Size(424, 20);
-            this.locNometb.TabIndex = 3;
-            this.locNometb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.locNomeTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.locNomeTb.Location = new System.Drawing.Point(186, 63);
+            this.locNomeTb.MaxLength = 80;
+            this.locNomeTb.Name = "locNomeTb";
+            this.locNomeTb.Size = new System.Drawing.Size(424, 20);
+            this.locNomeTb.TabIndex = 3;
+            this.locNomeTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locSalvaBt
             // 
@@ -1268,7 +1267,7 @@
             this.locSalvaBt.Location = new System.Drawing.Point(3, 314);
             this.locSalvaBt.Name = "locSalvaBt";
             this.locSalvaBt.Size = new System.Drawing.Size(613, 34);
-            this.locSalvaBt.TabIndex = 0;
+            this.locSalvaBt.TabIndex = 1;
             this.locSalvaBt.Text = "Salvar";
             this.locSalvaBt.UseVisualStyleBackColor = true;
             this.locSalvaBt.Click += new System.EventHandler(this.locSalvaBt_Click);
@@ -1276,7 +1275,7 @@
             // loginGb
             // 
             this.loginGb.Controls.Add(this.tableLayoutPanel10);
-            this.loginGb.Location = new System.Drawing.Point(48, 236);
+            this.loginGb.Location = new System.Drawing.Point(739, 437);
             this.loginGb.Name = "loginGb";
             this.loginGb.Size = new System.Drawing.Size(826, 410);
             this.loginGb.TabIndex = 4;
@@ -1286,17 +1285,17 @@
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 3;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(820, 391);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
@@ -1308,13 +1307,13 @@
             this.tableLayoutPanel11.Controls.Add(this.logIp, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.logBt, 0, 2);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(83, 83);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(103, 103);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(654, 225);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(614, 185);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
             // label31
@@ -1324,7 +1323,7 @@
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label31.Location = new System.Drawing.Point(3, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(648, 75);
+            this.label31.Size = new System.Drawing.Size(608, 61);
             this.label31.TabIndex = 0;
             this.label31.Text = "IP do servidor:";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1332,9 +1331,9 @@
             // logIp
             // 
             this.logIp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logIp.Location = new System.Drawing.Point(3, 78);
+            this.logIp.Location = new System.Drawing.Point(3, 64);
             this.logIp.Name = "logIp";
-            this.logIp.Size = new System.Drawing.Size(648, 20);
+            this.logIp.Size = new System.Drawing.Size(608, 20);
             this.logIp.TabIndex = 1;
             this.logIp.Text = "192.168.0.1";
             this.logIp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1342,24 +1341,128 @@
             // logBt
             // 
             this.logBt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logBt.Location = new System.Drawing.Point(3, 153);
+            this.logBt.Location = new System.Drawing.Point(3, 125);
             this.logBt.Name = "logBt";
-            this.logBt.Size = new System.Drawing.Size(648, 69);
+            this.logBt.Size = new System.Drawing.Size(608, 57);
             this.logBt.TabIndex = 2;
             this.logBt.Text = "Conectar";
             this.logBt.UseVisualStyleBackColor = true;
             this.logBt.Click += new System.EventHandler(this.logBt_Click);
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel12.Controls.Add(this.evLocal1Cb, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(197, 238);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 1;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(459, 41);
+            this.tableLayoutPanel12.TabIndex = 9;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 2;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel13.Controls.Add(this.evLocal2Cb, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(197, 285);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(459, 41);
+            this.tableLayoutPanel13.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(370, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 35);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Adicionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(370, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 35);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Adicionar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 2;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel14.Controls.Add(this.evEleTb, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(197, 144);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 1;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(459, 41);
+            this.tableLayoutPanel14.TabIndex = 10;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.Controls.Add(this.evElaTb, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.button4, 1, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(197, 191);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(459, 41);
+            this.tableLayoutPanel15.TabIndex = 10;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(370, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 35);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Adicionar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Location = new System.Drawing.Point(370, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 35);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Adicionar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button3_Click);
             // 
             // Mostra2016
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.loginGb);
-            this.Controls.Add(this.pessoaGb);
             this.Controls.Add(this.evGb);
-            this.Controls.Add(this.locGb);
+            this.Controls.Add(this.loginGb);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.locGb);
+            this.Controls.Add(this.pessoaGb);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(400, 300);
@@ -1378,7 +1481,6 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.evGb.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.locGb.ResumeLayout(false);
@@ -1389,6 +1491,12 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1430,7 +1538,6 @@
         private System.Windows.Forms.TextBox pesEstadoTb;
         private System.Windows.Forms.Button pesSaveTb;
         private System.Windows.Forms.GroupBox evGb;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
@@ -1447,8 +1554,6 @@
         private System.Windows.Forms.CheckBox evDataCh;
         private System.Windows.Forms.DateTimePicker evDataDtp;
         private System.Windows.Forms.TextBox evElaTb;
-        private System.Windows.Forms.TextBox evLocal1Tb;
-        private System.Windows.Forms.TextBox evLocal2Tb;
         private System.Windows.Forms.Button EvSavebt;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox evTipoCb;
@@ -1482,7 +1587,7 @@
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox locNometb;
+        private System.Windows.Forms.TextBox locNomeTb;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox pesCelTb;
@@ -1498,6 +1603,16 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox logIp;
         private System.Windows.Forms.Button logBt;
+        private System.Windows.Forms.ComboBox evLocal1Cb;
+        private System.Windows.Forms.ComboBox evLocal2Cb;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button button4;
     }
 }
 

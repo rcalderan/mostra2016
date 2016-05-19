@@ -126,8 +126,6 @@ namespace NoivaModasMostra
 
         public static Evento Load(int id, MySqlConnection con)
         {
-            Evento NA = new Evento();
-            NA.ID = 0;
             try
             {
                 if (con.State != System.Data.ConnectionState.Open)
@@ -151,16 +149,17 @@ namespace NoivaModasMostra
                 else
                 {
                     con.Close();
-                    return NA;
+                    return null;
                 }
             }
             catch
             {
                 if (con != null)
                     con.Close();
-                return NA;
+                return null;
             }
         }
+
 
     }
 
