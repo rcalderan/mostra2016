@@ -1,0 +1,13 @@
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\bin\Debug\NoivaModasMostra.exe.config
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\bin\Debug\NoivaModasMostra.exe
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\bin\Debug\NoivaModasMostra.pdb
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\bin\Debug\MySql.Data.dll
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\obj\Debug\NoivaModasMostra.csprojResolveAssemblyReference.cache
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\obj\Debug\NoivaModasMostra.Mostra2016.resources
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\obj\Debug\NoivaModasMostra.Properties.Resources.resources
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\obj\Debug\NoivaModasMostra.csproj.GenerateResource.Cache
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\obj\Debug\NoivaModasMostra.exe
+c:\users\tama\documents\visual studio 2015\Projects\NoivaModasMostra\NoivaModasMostra\obj\Debug\NoivaModasMostra.pdb
+H:\Mostra_repo\NoivaModasMostra\bin\Debug\NoivaModasMostra.exe.config
+H:\Mostra_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.exe
+H:\Mostra_repo\NoivaModasMostra\obj\Debug\NoivaModasMostra.pdb
