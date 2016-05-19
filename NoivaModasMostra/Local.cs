@@ -21,6 +21,11 @@ namespace NoivaModasMostra
         public string CIDADE { get; set; }
         public string ESTADO { get; set; }
 
+        /// <summary>
+        /// aaaa!
+        /// </summary>
+        /// <param name="con"></param>
+        /// <returns></returns>
         public static Local Last(MySqlConnection con)
         {
             try
